@@ -7,7 +7,7 @@ st.set_page_config(
     page_icon = "🚀",
     layout = 'wide'
 )
-st.title('CUSTOMER CHURN PREDICTION')
+st.title('CHURNNING PREDICTIONs')
 st.sidebar.success("select a page above")
 
 
