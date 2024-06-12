@@ -61,6 +61,15 @@ elif option == "Categorical Columns":
     st.write(df[categorical_columns])
 elif option == "Numerical Columns":
     st.write(df[numerical_columns])
+    
+   
+    
+# Add a description with the embedded link
+st.write("To get a brief definition of each column in the data set, please [Go to Data Dictionary Page](http://localhost:8501/data_dictionary).")
+
+
+    
+
 
 st.write("Users can upload their own data using the below drag and drop option. However, the data has to have the same features as the above dataset ")
 
@@ -72,3 +81,6 @@ if uploaded_file is not None:
     file_contents = uploaded_file.getvalue()
     st.write("Uploaded file contents:")
     st.write(file_contents)
+
+
+
