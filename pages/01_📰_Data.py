@@ -1,6 +1,7 @@
 import streamlit as st
 import pyodbc
 import pandas as pd
+import os
 
 st.set_page_config(
     page_title = "Data page",
@@ -13,6 +14,7 @@ st.sidebar.success("select a page above")
 st.write("*The dataset for this project was obtained from an SQL database.Below is a sample of the dataset used for this project*")
 
 ## create a connection to a database
+st.cache_resource(show_spinner="connecting to database...")
 @st.cache_resource(show_spinner="connecting to database...")
 def init_connection():
     connection_string = (
@@ -23,12 +25,12 @@ def init_connection():
         "PWD=" + st.secrets['password']
     )
     return pyodbc.connect(connection_string)
-
+    
 conn = init_connection()
 
-@st.cache_data(show_spinner="Running query...")
+st.cache_data(show_spinner="Running query...")
 def running_query(query):
-    with conn.cursor() as cursor:
+    with conn.cursor()as cursor:
         cursor.execute(query)
         rows = cursor.fetchall()
         columns = [column[0] for column in cursor.description]
