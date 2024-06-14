@@ -3,11 +3,11 @@ import joblib
 import pandas as pd
 
 st.set_page_config(
-    page_title = "Prediction page",
-    page_icon = "🚀",
-    layout = 'wide'
+    page_title="Prediction page",
+    page_icon="🚀",
+    layout='wide'
 )
-st.title('CHURNNING PREDICTIONs')
+st.title('CHURNNING PREDICTIONS')
 st.sidebar.success("select a page above")
 
 
@@ -15,7 +15,7 @@ st.sidebar.success("select a page above")
 ### function to load the models
 st.cache_resource(show_spinner='models loading ...')
 def select_model():
-    col1,col2 = st.columns(2) # to reduce the size of the select box
+    col1,col2=st.columns(2) # to reduce the size of the select box
     with col1:
         st.selectbox('select a model',options=['random_forest','logistic_regression'],key='selected_model') # a selectbox with the option of two models
     with col2:
@@ -116,12 +116,23 @@ def display_form():
 if __name__ == '__main__':
     display_form()
     
-    final_prediction = st.session_state['prediction']
+    final_prediction = st.session_state['prediction'][0]
+    final_probability = st.session_state['probability']
     if not final_prediction:
-        st.write('### PREDICTIONS!!')
+        st.write('### *PREDICTIONS SHOW HERE📥!!*')
         st.divider()
     else:
-        st.write(f'WILL THE CUSTOMER CHURN ? {final_prediction}')
+        col1,col2=st.columns(2)
+        with col1:
+            st.write(f'#### *WILL THE CUSTOMER CHURN?  {final_prediction}*')
+        with col2:
+            if final_prediction=="Yes":
+                st.write(f'#### *The probablity of the customer churning is {final_probability[0]:.2f}*')
+            else:
+                st.write(f'The probablity of the customer not churning is {final_probability[0]:.2f}')
+                
+            
+
     st.write(st.session_state)
                           
                              
