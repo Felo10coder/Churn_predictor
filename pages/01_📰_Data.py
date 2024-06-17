@@ -14,8 +14,8 @@ st.sidebar.success("select a page above")
 st.write("*The dataset for this project was obtained from an SQL database.Below is a sample of the dataset used for this project*")
 
 ## create a connection to a database
+
 st.cache_resource(show_spinner="connecting to database...")
-@st.cache_resource(show_spinner="connecting to database...")
 def init_connection():
     connection_string = (
         "DRIVER={SQL Server};"
@@ -50,11 +50,15 @@ df = get_all_columns()
 categorical_columns = df.select_dtypes(include=['object']).columns.tolist()
 numerical_columns = df.select_dtypes(include=['number']).columns.tolist()
 
-# Create select box at the top
-option = st.selectbox(
+col1,col2=st.columns(2)
+with col1:
+    # Create select box at the top
+    option = st.selectbox(
     "Select data to display",
     ("All Data", "Categorical Columns", "Numerical Columns")
-)
+    )
+with col2:
+    pass    
 
 # Display data based on selection
 if option == "All Data":
@@ -74,15 +78,17 @@ st.write("To get a brief definition of each column in the data set, please [Go t
 
 
 st.write("Users can upload their own data using the below drag and drop option. However, the data has to have the same features as the above dataset ")
-
+col1,col2=st.columns(2)
+with col1:
 # Add a file uploader (Dropbox)
-uploaded_file = st.file_uploader("Upload a file", type=['csv', 'txt'])
+    uploaded_file = st.file_uploader("Upload a file", type=['csv', 'txt'])
 # Check if a file was uploaded
-if uploaded_file is not None:
+    if uploaded_file is not None:
     # Process the uploaded file
-    file_contents = uploaded_file.getvalue()
-    st.write("Uploaded file contents:")
-    st.write(file_contents)
-
+        file_contents = uploaded_file.getvalue()
+        st.write("Uploaded file contents:")
+        st.write(file_contents)
+with col2:
+    pass
 
 

@@ -7,8 +7,12 @@ st.set_page_config(
     page_icon="🚀",
     layout='wide'
 )
-st.title('CHURNNING PREDICTIONS')
+st.title('CUSTOMER CHURN PREDICTION')
 st.sidebar.success("select a page above")
+st.write("""*Welcome to the Customer Churn Prediction page.
+        Here, you can input customer data to get real-time predictions on whether a customer is likely to churn.Leveraging advanced machine learning algorithms, 
+         our models i.e logistic regression and random forest models provide accurate insights to help you make informed decisions. Simply enter the relevant details,
+         and discover the likelihood of churn to better strategize your customer retention efforts.* """)
 
 
 
@@ -129,7 +133,7 @@ if __name__ == '__main__':
             if final_prediction=="Yes":
                 st.write(f'#### *The probablity of the customer churning is {final_probability[0]:.2f}*')
             else:
-                st.write(f'The probablity of the customer not churning is {final_probability[0]:.2f}')
+                st.write(f'#### *The probablity of the customer not churning is {final_probability[0]:.2f}*')
                 
             
 
