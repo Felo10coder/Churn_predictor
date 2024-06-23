@@ -1,0 +1,11 @@
+,gender,SeniorCitizen,Partner,Dependents,tenure,PaperlessBilling,PaymentMethod,MonthlyCharges,TotalCharges,PhoneService,MultipleLines,InternetService,OnlineSecurity,OnlineBackup,DeviceProtection,TechSupport,StreamingTV,StreamingMovies,Contract,prediction,probability,time_of_prediction,model_used
+0,Female,Yes,Yes,Yes,0,Yes,Electronic check,18.0,118.0,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,0.43,2024-06-18,random_forest
+0,Female,Yes,Yes,Yes,0,Yes,Electronic check,18.0,118.0,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,No,0.54,2024-06-18,logistic_regression
+0,Female,Yes,Yes,Yes,0,Yes,Electronic check,18.0,118.0,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,0.43,2024-06-18,random_forest
+0,Male,Yes,Yes,Yes,8,No,Electronic check,18.0,118.0,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,No,0.68,2024-06-18,logistic_regression
+0,Female,Yes,Yes,Yes,0,Yes,Electronic check,18.0,118.0,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,0.43,2024-06-18,random_forest
+0,Female,Yes,Yes,Yes,0,Yes,Electronic check,18.0,118.0,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,0.43,2024-06-22,random_forest
+0,Female,Yes,Yes,Yes,0,Yes,Electronic check,18.0,118.0,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,0.43,2024-06-24,random_forest
+0,Female,Yes,Yes,Yes,0,Yes,Electronic check,21.0,118.0,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,0.43,2024-06-24,random_forest
+0,Female,Yes,Yes,No,0,Yes,Electronic check,21.0,121.0,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,0.46,2024-06-24,random_forest
+0,Female,Yes,Yes,No,0,Yes,Electronic check,21.0,121.0,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,0.46,2024-06-24,logistic_regression
