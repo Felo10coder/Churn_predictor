@@ -1,0 +1,14 @@
+
+credentials:
+  usernames:
+    felixkwemoi:
+      email: felixkwemoi&@gmail.com
+      name: Felix Kwemoi
+      password: FKM#101
+cookie:
+    expiry_days: 0
+    key: cookie_signature_key
+    name: cookie_name
+preauthorized:
+  emails:
+  - felix.motonyi@azubiafrica.org
